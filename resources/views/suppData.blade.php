@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('container')
-    <h1><span style="font-weight: 700; font-size:55px">Data Supplier</span> <button class="btn btn-dark btn-sm"><i class="fa-solid fa-plus"></i> &nbsp;Tambah Data</button></h1>
+    <h1><span style="font-weight: 700; font-size:55px">Data Supplier</span></h1>
 
     <table class="table table-striped" style="text-align: center; box-shadow:0 0 1px black, 0 0 4px black;">
         <thead class="table-dark">
@@ -32,10 +32,10 @@
                 <td>
                     <a class="link-primary" href="/detail/{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Informasi lebih lanjut"><i class="fa-solid fa-circle-info fa-lg"></i></a>
-                    <a class="link-primary" style="padding-left: 10px" href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                    {{-- <a class="link-primary" style="padding-left: 10px" href="#" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Edit data"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
                     <a class="link-danger" style="padding-left: 10px" href="#" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Hapus data"><i class="fa-sharp fa-solid fa-trash fa-lg"></i></a>
+                        title="Hapus data"><i class="fa-sharp fa-solid fa-trash fa-lg"></i></a> --}}
 
                 </td>
             </tr>

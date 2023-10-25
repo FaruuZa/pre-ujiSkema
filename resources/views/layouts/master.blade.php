@@ -31,7 +31,7 @@
                 </div>
                 <li><a href="/">Home</a></li>
                 <li><a href="/data-supplier">Data Supplier</a></li>
-                <li><a href="/kirim-barang">Kirim Barang</a></li>
+                <li><a href="/data-barang">Data Barang</a></li>
                 <li><a href="/barang-terkirim">Data barang terkirim</a></li>
                 {{-- <li><a href="#team">Team</a></li>
                 <li class="dropdown">

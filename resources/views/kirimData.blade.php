@@ -14,37 +14,35 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @if (count($supplier) > 0)
-            @foreach ($supplier as $item)
+            @if (count($data) > 0)
+            @foreach ($data as $item)
             <tr>
                 <td>
                     {{$loop->iteration}}
                 </td>
                 <td>
-                    {{$item->name}}
+                    {{$item->Supplier->name}}
                 </td>
                 <td>
-                    {{$item->address}}
+                    {{$item->Barang->name}}
                 </td>
                 <td>
-                    {{$item->phone}}
+                    {{$item->qty}}
                 </td>
                 <td>
-                    <a class="link-primary" href="/detail/{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Informasi lebih lanjut"><i class="fa-solid fa-circle-info fa-lg"></i></a>
-                    <a class="link-primary" style="padding-left: 10px" href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <a class="link-primary" style="padding-left: 10px" href="/barang-terkirim/edit/{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Edit data"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
-                    <a class="link-danger" style="padding-left: 10px" href="#" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <a class="link-danger" style="padding-left: 10px" href="/barang-terkirim/destroy/{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Hapus data"><i class="fa-sharp fa-solid fa-trash fa-lg"></i></a>
 
                 </td>
             </tr>
             @endforeach
-            @else --}}
+            @else
             <tr>
                 <td colspan="5">Tidak ada Data</td>
             </tr>
-            {{-- @endif --}}
+            @endif
         </tbody>
     </table>
 

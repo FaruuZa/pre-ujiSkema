@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Supplier extends Model
+class Barang extends Model
 {
     use HasFactory;
-    protected $guarded = ['id'];
 
+    protected $guarded = ['id'];
     public function barangKirim(){
-        return $this->hasMany(barangKirim::class);
+        return $this->belongsTo(barangKirim::class);
     }
 }
