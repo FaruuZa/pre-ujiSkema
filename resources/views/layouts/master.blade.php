@@ -25,23 +25,18 @@
         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <div class="sidebar-header">
-                    <div class="sidebar-brand">
-                        <a href="#">Brand</a>
+                    <div class="sidebar-brand" >
+                        <a href="#"style="text-decoration: none; color:rgb(45, 179, 241); font-weight:650;">Pra UjiSkema</a>
                     </div>
                 </div>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/data-supplier">Data Supplier</a></li>
+                <li><a href="/kirim-barang">Kirim Barang</a></li>
+                <li><a href="/barang-terkirim">Data barang terkirim</a></li>
+                {{-- <li><a href="#team">Team</a></li>
                 <li class="dropdown">
                     <a href="#works" class="dropdown-toggle" data-bs-toggle="collapse">Works <span
                             class="caret"></span></a>
-                    {{-- <p>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Link with href
-                        </a>
-                    </p> --}}
                     <div class="collapse" id="works">
                         <ul class="animated fadeInLeft" role="menu">
                             <div class="">Dropdown heading</div>
@@ -56,7 +51,7 @@
                 </li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#followme">Follow me</a></li>
+                <li><a href="#followme">Follow me</a></li> --}}
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
@@ -70,7 +65,7 @@
             </button>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-9 col-lg-offset-2">
                         @yield('container')
                     </div>
                 </div>
@@ -85,6 +80,11 @@
     <script src="{{ asset('vendor/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/master.js') }}"></script>
+ <script>
+    $(function () {
+        $("[rel='tooltip']").tooltip();
+    });
+ </script>
 
 </body>
 

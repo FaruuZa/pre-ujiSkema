@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\barangController;
+use App\Http\Controllers\supplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('suppData');
+Route::get('/', function(){
+    return view('welcome');
 });
+Route::get('/data-supplier', [supplierController::class, 'index']);
+Route::get('/barang-terkirim/tambah', [barangController::class, 'tambah']);
+Route::get('/barang-terkirim', [barangController::class, 'index']);
+Route::get('/detail/{supplier_id}', [supplierController::class, 'detail']);
+

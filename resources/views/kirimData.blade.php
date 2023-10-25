@@ -1,20 +1,20 @@
 @extends('layouts.master')
 
 @section('container')
-    <h1><span style="font-weight: 700; font-size:55px">Data Supplier</span> <button class="btn btn-dark btn-sm"><i class="fa-solid fa-plus"></i> &nbsp;Tambah Data</button></h1>
+    <h1><span style="font-weight: 700; font-size:50px">Data Barang Terkirim</span> <a href="/barang-terkirim/tambah" class="btn btn-dark btn-sm"><i class="fa-solid fa-plus"></i> &nbsp;Tambah Data</a></h1>
 
     <table class="table table-striped" style="text-align: center; box-shadow:0 0 1px black, 0 0 4px black;">
         <thead class="table-dark">
             <tr>
                 <td>No</td>
-                <td>Nama</td>
-                <td>Alamat</td>
-                <td>No. Telp</td>
+                <td>Supplier</td>
+                <td>Barang</td>
+                <td>Jumlah</td>
                 <td>Aksi</td>
             </tr>
         </thead>
         <tbody>
-            @if (count($supplier) > 0)
+            {{-- @if (count($supplier) > 0)
             @foreach ($supplier as $item)
             <tr>
                 <td>
@@ -40,11 +40,11 @@
                 </td>
             </tr>
             @endforeach
-            @else
+            @else --}}
             <tr>
                 <td colspan="5">Tidak ada Data</td>
             </tr>
-            @endif
+            {{-- @endif --}}
         </tbody>
     </table>
 
