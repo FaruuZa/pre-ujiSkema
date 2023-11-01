@@ -13,9 +13,9 @@ class barangKirim extends Model
     protected $guarded = ['id'];
 
     public function Barang(){
-        return $this->hasOne(Barang::class, 'id');
+        return $this->belongsTo(Barang::class, 'id_barang');
     }
     public function Supplier(){
-        return $this->belongsTo(Supplier::class, 'id');
+        return $this->belongsTo(Supplier::class, 'id_supplier');
     }
 }

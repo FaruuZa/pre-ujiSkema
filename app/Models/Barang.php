@@ -11,7 +11,4 @@ class Barang extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    public function barangKirim(){
-        return $this->belongsTo(barangKirim::class);
-    }
 }

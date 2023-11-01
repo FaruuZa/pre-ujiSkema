@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("fulladdress");
             $table->string("categories");
             $table->string("phone");
-            $table->string("google_maps_url");
+            $table->string("gmaps");
             $table->string("website")->nullable();
             $table->string("open_hours");
             $table->string("image");

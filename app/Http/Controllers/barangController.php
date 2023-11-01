@@ -28,9 +28,9 @@ class barangController extends Controller
         return $code;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $barang = Barang::get();
+        $barang = Barang::where('name', 'LIKE', '%'.$request->search.'%')->get();
         return view('barangData', compact('barang'));
     }
 
@@ -104,6 +104,7 @@ class barangController extends Controller
     public function indexKirim()
     {
         $data = barangKirim::with('Barang', 'Supplier')->get();
+
         return view('kirimData', compact('data'));
     }
 
