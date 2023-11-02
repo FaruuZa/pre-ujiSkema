@@ -49,8 +49,13 @@
                 @endif
             </tbody>
         </table>
-        <div class="btn btn-dark" style="height: 40px; width:40px; margin-left:10px" data-bs-toggle="modal"
-            data-bs-target="#exampleModal"><i class="fas fa-search "></i></div>
+        <div class="tombs" style=" margin-left:10px;" >
+            <div class="btn btn-dark" style="aspect-ratio:1/1; {{$query ? 'width:50%' : '' }} " data-bs-toggle="modal"
+                data-bs-target="#exampleModal"><i class="fas fa-search "></i></div>
+                @if ($query or $q > 0)
+                <a href="/data-barang" class="btn btn-dark" style=" width:50%; aspect-ratio:1/1; margin-top:5px;"><i class="fas fa-rotate"></i></a>
+                @endif
+        </div>
     </div>
 
     <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -63,8 +68,10 @@
                 <div class="modal-body">
                     <form action="" method="GET">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="search" autofocus>
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+                            <input type="text" class="form-control" name="search" value="{{ $q > 0 ? $query : '' }}"
+                                id="myInput" autocomplete="off">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+                                    class="fas fa-search"></i></button>
                         </div>
                     </form>
                 </div>
@@ -75,4 +82,12 @@
 
 
 
+@endsection
+
+@section('script')
+    <script>
+        $(window).on('shown.bs.modal', function() {
+            document.getElementById('myInput').focus()
+        });
+    </script>
 @endsection

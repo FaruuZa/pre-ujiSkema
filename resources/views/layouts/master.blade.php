@@ -80,11 +80,13 @@
     <script src="{{ asset('vendor/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/master.js') }}"></script>
+    @yield('script')
  <script>
     $(function () {
         $("[rel='tooltip']").tooltip();
     });
  </script>
+
 
 </body>
 

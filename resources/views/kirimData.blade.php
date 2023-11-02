@@ -2,7 +2,7 @@
 
 @section('container')
     <h1><span style="font-weight: 700; font-size:50px">Data Barang Terkirim</span> <a href="/barang-terkirim/tambah" class="btn btn-dark btn-sm"><i class="fa-solid fa-plus"></i> &nbsp;Tambah Data</a></h1>
-
+    
     <table class="table table-striped" style="text-align: center; box-shadow:0 0 1px black, 0 0 4px black;">
         <thead class="table-dark">
             <tr>
@@ -10,6 +10,7 @@
                 <td>Supplier</td>
                 <td>Barang</td>
                 <td>Jumlah</td>
+                <td>Tanggal Kirim</td>
                 <td>Aksi</td>
             </tr>
         </thead>
@@ -28,6 +29,9 @@
                 </td>
                 <td>
                     {{$item->qty}}
+                </td>
+                <td>
+                    {{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}
                 </td>
                 <td>
                     <a class="link-primary" style="padding-left: 10px" href="/barang-terkirim/edit/{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="top"

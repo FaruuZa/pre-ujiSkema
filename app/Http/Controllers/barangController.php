@@ -6,6 +6,7 @@ use App\Models\Barang;
 use App\Models\barangKirim;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class barangController extends Controller
 {
@@ -30,8 +31,10 @@ class barangController extends Controller
 
     public function index(Request $request)
     {
-        $barang = Barang::where('name', 'LIKE', '%'.$request->search.'%')->get();
-        return view('barangData', compact('barang'));
+        $query = $request->search;
+        $q = Str::length($query);
+        $barang = Barang::where('name', 'LIKE', '%'.$query.'%')->orWhere('code', 'LIKE', '%'.$query.'%')->get();
+        return view('barangData', compact('barang', 'q', 'query'));
     }
 
     public function tambah()
